@@ -3,6 +3,10 @@
 readonly VERSION="0.3.0"
 readonly DEFAULT_CIPHER="aes-256-ecb"
 
+# tr will fail on OSX unless this is set
+# see: http://www.real-world-systems.com/docs/tr.1.html
+export LC_ALL=C
+
 init_config() {
 	local answer
 	while [ 1 ]; do
